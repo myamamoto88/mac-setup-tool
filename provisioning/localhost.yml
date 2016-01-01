@@ -125,6 +125,10 @@
     - name: dotfiles のインストール
       shell: curl -fsSL https://raw.githubusercontent.com/myamamoto88/dotfiles/master/install.sh | bash
 
+    # vim plugin
+    - name: NeoBundle をインストール
+      shell: curl -fsSL https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | bash
+
   handlers:
     - name: run fc-cache
       shell: fc-cache -vf
