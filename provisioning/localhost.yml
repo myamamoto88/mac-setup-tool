@@ -61,6 +61,7 @@
       - { name: seashore }
       - { name: vagrant }
       - { name: virtualbox }
+      - { name: alfred }
 
   tasks:
     - name: homebrew の tap リポジトリを追加
