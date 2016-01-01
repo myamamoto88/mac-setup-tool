@@ -121,6 +121,10 @@
         creates: ~/Library/Fonts/Ricty-Bold.ttf
       notify: run fc-cache
 
+    # dotfiles
+    - name: dotfiles のインストール
+      shell: curl -fsSL https://raw.githubusercontent.com/myamamoto88/dotfiles/master/install.sh | bash
+
   handlers:
     - name: run fc-cache
       shell: fc-cache -vf
