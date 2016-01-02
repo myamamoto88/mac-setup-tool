@@ -45,6 +45,9 @@
       - { name: tig }
       - { name: zsh, install_options: disable-etcdir }
       - { name: flow }
+      - { name: docker }
+      - { name: docker-machine }
+      - { name: docker-compose }
     homebrew_cask_packages:
       - { name: java }
       - { name: adobe-reader }
