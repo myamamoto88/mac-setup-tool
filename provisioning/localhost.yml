@@ -69,6 +69,7 @@
       - { target: ~/Library/Preferences/com.googlecode.iterm2.plist, command: 'Set :"New Bookmarks":0:"Normal Font" "Ricty 14"' }
       - { target: ~/Library/Preferences/com.googlecode.iterm2.plist, command: 'Set :"New Bookmarks":0:"Non Ascii Font" "Ricty 14"' }
       - { target: ~/Library/Preferences/com.googlecode.iterm2.plist, command: 'Set :"New Bookmarks":0:"Transparency" 0.122797' }
+      - { target: ~/Library/Preferences/com.googlecode.iterm2.plist, command: 'Set :"New Bookmarks":0:"Silence Bell" true' }
 
   tasks:
     - name: homebrew の tap リポジトリを追加
