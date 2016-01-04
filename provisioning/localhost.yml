@@ -65,6 +65,10 @@
       - { name: vagrant }
       - { name: virtualbox }
       - { name: alfred }
+    plist_buddy_items:
+      - { target: ~/Library/Preferences/com.googlecode.iterm2.plist, command: 'Set :"New Bookmarks":0:"Normal Font" "Ricty 14"' }
+      - { target: ~/Library/Preferences/com.googlecode.iterm2.plist, command: 'Set :"New Bookmarks":0:"Non Ascii Font" "Ricty 14"' }
+      - { target: ~/Library/Preferences/com.googlecode.iterm2.plist, command: 'Set :"New Bookmarks":0:"Transparency" 0.122797' }
 
   tasks:
     - name: homebrew の tap リポジトリを追加
@@ -133,10 +137,9 @@
       shell: curl -fsSL https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | bash
 
     # setting
-    - name: iterm2のNormal fontの設定
-      shell: /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" "Ricty 14"' ~/Library/Preferences/com.googlecode.iterm2.plist
-    - name: iterm2の fontの設定
-      shell: /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Non Ascii Font" "Ricty 14"' ~/Library/Preferences/com.googlecode.iterm2.plist
+    - name: PlistBuddy でアプリケーションの設定
+      shell: /usr/libexec/PlistBuddy -c '{{ item.command }}' {{ item.target }}
+      with_items: plist_buddy_items
     - name: リピートキー設定
       shell: defaults write NSGlobalDomain KeyRepeat -int 3
     - name: リピート入力認識時間の設定
