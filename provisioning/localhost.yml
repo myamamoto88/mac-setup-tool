@@ -132,6 +132,16 @@
     - name: NeoBundle をインストール
       shell: curl -fsSL https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.sh | bash
 
+    # setting
+    - name: iterm2のNormal fontの設定
+      shell: /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Normal Font" "Ricty 14"' ~/Library/Preferences/com.googlecode.iterm2.plist
+    - name: iterm2の fontの設定
+      shell: /usr/libexec/PlistBuddy -c 'Set :"New Bookmarks":0:"Non Ascii Font" "Ricty 14"' ~/Library/Preferences/com.googlecode.iterm2.plist
+    - name: リピートキー設定
+      shell: defaults write NSGlobalDomain KeyRepeat -int 3
+    - name: リピート入力認識時間の設定
+      shell: defaults write NSGlobalDomain InitialKeyRepeat -int 15
+
   handlers:
     - name: run fc-cache
       shell: fc-cache -vf
