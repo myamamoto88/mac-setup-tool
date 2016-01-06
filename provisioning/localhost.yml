@@ -149,6 +149,10 @@
       shell: defaults write NSGlobalDomain KeyRepeat -int 3
     - name: リピート入力認識時間の設定
       shell: defaults write NSGlobalDomain InitialKeyRepeat -int 15
+    - name: iPhone接続時の自動起動を無効にする設定
+      shell: defaults write com.apple.ImageCapture disableHotPlug -bool true
+    - name: 隠しファイルをFinder上で可視化する
+      shell: defaults write com.apple.finder AppleShowAllFiles true
 
   handlers:
     - name: run fc-cache
