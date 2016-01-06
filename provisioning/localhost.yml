@@ -114,6 +114,12 @@
       args:
         creates: ~/.oh-my-zsh/
 
+    # nodebrew
+    - name: nodebrew をインストール
+      shell: curl -L git.io/nodebrew | perl - setup
+      args:
+        creates: ~/.nodebrew/
+
     # Ricty
     - name: xquartz のインストール (for Ricty)
       homebrew_cask: name=xquartz
