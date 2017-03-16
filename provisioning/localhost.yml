@@ -62,7 +62,6 @@
       - { name: skitch }
       - { name: evernote }
       - { name: seashore }
-      - { name: vagrant }
       - { name: virtualbox }
       - { name: alfred }
       - { name: dash }
