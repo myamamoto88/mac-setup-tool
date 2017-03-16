@@ -45,6 +45,9 @@
       - { name: docker }
       - { name: docker-machine }
       - { name: docker-compose }
+      - { name: gnu-sed }
+      - { name: git-flow-avh }
+      - { name: graphviz }
     homebrew_cask_packages:
       - { name: java }
       - { name: adobe-reader }
@@ -62,6 +65,9 @@
       - { name: vagrant }
       - { name: virtualbox }
       - { name: alfred }
+      - { name: dash }
+      - { name: sequel-pro }
+      - { name: git-lfs }
     plist_buddy_items:
       - { target: ~/Library/Preferences/com.googlecode.iterm2.plist, command: 'Set :"New Bookmarks":0:"Normal Font" "Ricty 14"' }
       - { target: ~/Library/Preferences/com.googlecode.iterm2.plist, command: 'Set :"New Bookmarks":0:"Non Ascii Font" "Ricty 14"' }
